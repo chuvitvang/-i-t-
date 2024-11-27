@@ -14,7 +14,6 @@ for nguoi, statement in loikhai.items():# hàm items() lấy cả key và giá t
     # Đếm số người tố cáo và im lặng
     so_tocao = sum(value == 'tocao' for value in loikhai.values())
     so_imlang = len(loikhai) - so_tocao
-
     if so_tocao == 2 and statement == 'slient':#đk tổng số người tố cáo =2 ,chỉ xét người im lặng là statement
         print(f'{nguoi} lãnh án 20 năm, các người còn lại lãnh án 10 năm.')
         break
