@@ -5,7 +5,7 @@ loikhai = {
     'C': input('Nhập lời khai của C: ')
 }
 #cả 3 người đều im lăng và 3 người đều tố cáo
-if all(value == 'slient' for value in loikhai.values()): #hàm all() kiểm tra tất cả các values(giá trị)
+if all(value == 'slient' for value in loikhai.values()): #hàm all() chọn tất cả các values(giá trị)
     print('A, B, C lãnh án 5 năm.')
 else:
     print('A, B, C lãnh án 10 năm.')
