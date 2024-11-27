@@ -3,12 +3,12 @@ loikhai = {
     'B': input('Nhập lời khai của B: '),
     'C': input('Nhập lời khai của C: ')
 }
-#cả 3 người đều im lăng
+#cả 3 người đều im lăng và 3 người đều tố cáo
 if all(value == 'slient' for value in loikhai.values()):
     print('A, B, C lãnh án 5 năm.')
-#cả 3 người đều tố cáo
-elif all(value != 'slient' for value in loikhai.values()):
+else:
     print('A, B, C lãnh án 10 năm.')
+
 for person, statement in loikhai.items():
     # Kiểm tra trường hợp có 2 người tố cáo, 1 người giữ im lặng
     if sum(value != 'slient' for value in loikhai.values()) == 2 and statement == 'slient':
