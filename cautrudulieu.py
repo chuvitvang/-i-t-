@@ -10,12 +10,14 @@ if all(value == 'slient' for value in loikhai.values()): #hàm all() kiểm tra 
 else:
     print('A, B, C lãnh án 10 năm.')
 
-for nguoi, statement in loikhai.items(): # hàm items() lấy cả key và giá trị
-    # Kiểm tra trường hợp có 2 người tố cáo, 1 người giữ im lặng
-    if sum(value != 'slient' for value in loikhai.values()) == 2 and statement == 'slient': #đk tổng số người tố cáo =2 ,chỉ xét người im lặng là statement
+for nguoi, statement in loikhai.items():# hàm items() lấy cả key và giá trị
+    # Đếm số người tố cáo và im lặng
+    so_tocao = sum(value == 'tocao' for value in loikhai.values())
+    so_imlang = len(loikhai) - so_tocao
+
+    if so_tocao == 2 and statement == 'slient':#đk tổng số người tố cáo =2 ,chỉ xét người im lặng là statement
         print(f'{nguoi} lãnh án 20 năm, các người còn lại lãnh án 10 năm.')
         break
-    # Kiểm tra trường hợp 1 người tố cáo và 2 người im lặng
-    elif sum(value != 'tocao' for value in loikhai.values()) == 2 and statement == 'tocao': #đk tổng số người im lặng =2 ,chỉ xét người tố cáo là statement
+    elif so_imlang == 2 and statement == 'tocao':#đk tổng số người im lặng =2 ,chỉ xét người tố cáo là statement
         print(f'{nguoi} tự do, các người còn lại lãnh án 10 năm.')
         break
