@@ -3,10 +3,10 @@ loikhai_B = input('Nhập lời khai của B: ')
 loikhai_C = input('Nhập lời khai của C: ')
 
 #cả 3 người đều im lặng
-if loikhai_A == loikhai_B == loikhai_C == 'slient':
+if loikhai_A == loikhai_B == loikhai_C == 'imlang':
     print('A, B, C lãnh án 5 năm.')
 #cả 3 người đều tố cáo
-elif loikhai_A == loikhai_B == loikhai_C != 'slient':
+elif loikhai_A == loikhai_B == loikhai_C != 'imlang':
     print('A, B, C lãnh án 10 năm.')
 # Kiểm tra trường hợp có 2 người tố cáo, 1 người giữ im lặng
 #3 truong hop:
@@ -24,10 +24,10 @@ elif loikhai_B == loikhai_C =='tocao':
 #a b im c to cao
 #a c im b to cao
 #b c im a to cao
-elif loikhai_A == loikhai_B =='slient':
+elif loikhai_A == loikhai_B =='imlang':
     print('C tự do , A B lãnh án 10 năm')
-elif loikhai_A == loikhai_C =='slient':
+elif loikhai_A == loikhai_C =='imlang':
     print('B tự do , A C lãnh án 10 năm')
-elif loikhai_B == loikhai_C =='slient':
+elif loikhai_B == loikhai_C =='imlang':
     print('A tự do , B C lãnh án 10 năm')
 
